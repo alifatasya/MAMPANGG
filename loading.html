@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAMPANG</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+   
+</head>
+<body>
+  <div id="app" style="display: flex; justify-content: flex-start;align-items: center; height: 80vh;"></div>  
+  <script>
+    onload = function() {
+        let id = document.getElementById("app")
+        let loading = document.createElement("div")
+        loading.textContent = "."
+        loading.style.fontSize = "70px"
+        loading.style.color = "#16a085"
+        loading.style.fontFamily = "Courier, monospace" 
+        id.appendChild(loading)
+        let loaded = setInterval(function() {
+            loading.textContent = loading.textContent + "."
+        },300)
+        setTimeout (function() {
+            clearInterval(loaded)
+            loading.textContent = "WELCOME TO MAMPANG"
+        }, 1500)
+    }
+  </script>
+   <div class="loading-container">
+    <form action="" method="post" class="flex">
+         <a href="home.html" class="inline-btn">NEXT</a>
+    </form>
+    </div>
+
+</body>
+</html>
